@@ -43,9 +43,9 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
                     _this.options.onEnd.apply(_this);
                 }
                 dateData = {
-                    years: 2022,
-                    days: 20,
-                    hours: 20,
+                    years: 0,
+                    days: 10,
+                    hours: 10,
                     min: 60,
                     sec: 60,
                     millisec: 0
@@ -71,12 +71,9 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
             };
             this.leadingZeros = function(num, length) {
                 if (length == null) {
-                    length = 2;
+                    length = 0;
                 }
                 num = String(num);
-                while (num.length < length) {
-                    num = "0" + num;
-                }
                 return num;
             };
             this.update = function(newDate) {
@@ -111,7 +108,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
             return this.init();
         };
         $.countdown.defaultOptions = {
-            date: "June 7, 2087 15:03:25",
+            date: "January 7, 2022 15:03:25",
             refresh: 1000,
             onEnd: $.noop,
             render: function(date) {
